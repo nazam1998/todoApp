@@ -7,13 +7,14 @@
     </ion-header>
 
     <ion-content :fullscreen="true">
-      
+      <todo-list />
     </ion-content>
   </ion-page>
 </template>
 
 <script setup lang="ts">
 import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar } from '@ionic/vue';
+import TodoList from '@/components/TodoList.vue';
 </script>
 
 <style scoped>
