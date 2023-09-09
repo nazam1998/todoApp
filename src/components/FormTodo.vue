@@ -1,6 +1,6 @@
 <template>
   <form @submit.prevent="addTodo">
-    <ion-input v-model="inputValue" type="text" :label="'Enter Todo: '" />
+    <ion-input v-model="inputValue" type="text" :label="'Enter Todo: '"  autofocus/>
     <div class="button-container">
       <ion-button
         type="submit"
