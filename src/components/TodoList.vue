@@ -29,7 +29,7 @@ export default {
   },
   setup() {
     const todoListHeaders = ref([
-      { id: 1, title: "Todo", isSelected: true },
+      { id: 1, title: "All", isSelected: true },
       { id: 2, title: "In Progress", isSelected: false },
       { id: 3, title: "Completed", isSelected: false },
     ]);
