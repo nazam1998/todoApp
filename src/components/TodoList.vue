@@ -1,20 +1,23 @@
-<!-- make base structure of ionic vue component -->
 <template>
-  <todo-list-header
-    :todoListHeaders="todoListHeaders"
-    :on-click-handler="onClickHandler"
-  />
-  <ion-list class="todo-list-wrapper">
-    <ion-item v-for="todo in showCurrentTodo" :key="todo.id">
-      <ion-label>{{ todo.title }}</ion-label>
-    </ion-item>
-  </ion-list>
+  <div class="container">
+    <form-todo :todos="todos" />
+    <todo-list-header
+      :todoListHeaders="todoListHeaders"
+      :on-click-handler="onClickHandler"
+    />
+    <ion-list class="todo-list-wrapper">
+      <ion-item v-for="todo in showCurrentTodo" :key="todo.id">
+        <ion-label>{{ todo.title }}</ion-label>
+      </ion-item>
+    </ion-list>
+  </div>
 </template>
 
 <script lang="ts">
 import { IonList, IonItem, IonLabel } from "@ionic/vue";
 import { ref } from "vue";
 import TodoListHeader from "@/components/TodoListHeader.vue";
+import FormTodo from "./FormTodo.vue";
 
 export default {
   components: {
@@ -22,9 +25,9 @@ export default {
     IonItem,
     IonLabel,
     TodoListHeader,
+    FormTodo,
   },
   setup() {
-    // 
     const todoListHeaders = ref([
       { id: 1, title: "Todo", isSelected: true },
       { id: 2, title: "In Progress", isSelected: false },
@@ -88,8 +91,11 @@ export default {
 </script>
 
 <style scoped>
-.todo-list-wrapper {
+.container {
   margin: 20px 32px;
+}
+.todo-list-wrapper {
+  margin: 20px 0;
   border-radius: 8px;
 }
 </style>

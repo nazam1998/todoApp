@@ -48,7 +48,6 @@ export default {
     const headerSegment = ref();
     const selectedSegment = ref(todoListHeaders.value[0].id);
 
-
     return { todoListHeaders, onClickHandler, headerSegment, selectedSegment };
   },
 };
@@ -58,7 +57,7 @@ export default {
 .todo-list-header {
   display: flex;
   flex-direction: row;
-  margin: 16px 32px;
+  margin: 16px 0;
   border-radius: 8px;
 }
 </style>
