@@ -9,7 +9,7 @@
       <ion-segment-button
         v-for="item in todoListHeaders"
         :key="item.id"
-        @click="() => onClickHandler(item.id)"
+        @click="onClickHandler(item.id)"
         :value="item.id"
       >
         <ion-label>{{ item.title }}</ion-label>
