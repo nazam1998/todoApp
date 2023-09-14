@@ -50,11 +50,12 @@ export default {
       });
     };
     const onClickHandler = (id: number) => {
-      const selectedInderHeader = getHeaderById(id);
-      if (!todoListHeaders.value[selectedInderHeader].isSelected) {
+      const selectedHeaderIndex = getHeaderById(id);
+      const isSelected = todoListHeaders.value[selectedHeaderIndex].isSelected
+      if (!isSelected) {
         resetSelection();
-        todoListHeaders.value[selectedInderHeader].isSelected =
-          !todoListHeaders.value[selectedInderHeader].isSelected;
+        todoListHeaders.value[selectedHeaderIndex].isSelected =
+          !isSelected;
       }
     };
 
